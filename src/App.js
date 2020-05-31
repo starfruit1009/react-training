@@ -3,21 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const RandomParagraph = function() {
+    return React.createElement('p', {style: {color: '#57bb55', fontSize: '30px'}}, 'Welcome to Cowell');
+  };
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <RandomParagraph />
+        {/* the Syntax above is then being compiled into syntax like below */}
+        {React.createElement('p', {style: {color: '#203532', fontSize: '30px'}}, 'Beyond borders')}
       </header>
     </div>
   );
